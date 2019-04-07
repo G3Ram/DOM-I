@@ -133,8 +133,13 @@ visionContent.innerText = siteContent["main-content"]["vision-content"];
 
 let contact_H4 = document.getElementsByTagName("h4")[5];
 contact_H4.innerText = siteContent["contact"]["contact-h4"];
+
+// Updated address to have a break after street to match the example file
 let address = document.getElementsByTagName("p")[5];
 address.innerText = siteContent["contact"]["address"];
+let addrArr = address.innerText.split("Street");
+address.innerHTML = addrArr.join("Street </BR>");
+
 let phone = document.getElementsByTagName("p")[6];
 phone.innerText = siteContent["contact"]["phone"];
 let email = document.getElementsByTagName("p")[7];
