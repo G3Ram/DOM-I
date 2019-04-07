@@ -45,6 +45,7 @@ const siteContent = {
 //Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
+logo.setAttribute("alt", "Great Idea! Company logo");
 
 // let headerImg = document.getElementById("cta-img");
 // headerImg.setAttribute("src", "img/header-img.png");
@@ -78,6 +79,20 @@ about.innerText = siteContent["nav"]["nav-item-5"];
 let contact = document.getElementsByTagName("a")[5];
 contact.innerText = siteContent["nav"]["nav-item-6"];
 
+var newNavItem = document.createElement("a");
+newNavItem.innerText = "Home";
+document.getElementsByTagName("nav")[0].prepend(newNavItem);
+
+var lastNavItem = document.createElement("a");
+lastNavItem.innerText = "Gallery";
+document.getElementsByTagName("nav")[0].appendChild(lastNavItem);
+
+// nav a -> green
+let navItems = document.getElementsByTagName("a");
+for (var i = 0; i < navItems.length; i++) {
+  navItems[i].style.color = "green";
+}
+
 // cta
 
 let h1_ = document.getElementsByTagName("h1")[0];
@@ -93,9 +108,11 @@ button.innerText = siteContent["cta"]["button"];
 
 let headerImg = document.getElementById("cta-img");
 headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
+headerImg.setAttribute("alt", "Image of a Code Snippet.");
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src", "img/mid-page-accent.jpg");
+middleImg.setAttribute("alt", "Image of code snippets across the screen");
 
 // main-content
 
