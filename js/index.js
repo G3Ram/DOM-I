@@ -146,6 +146,20 @@ vision_H4.innerText = siteContent["main-content"]["vision-h4"];
 let visionContent = document.getElementsByTagName("p")[4];
 visionContent.innerText = siteContent["main-content"]["vision-content"];
 
+//button event
+var getStartedBtn = document.getElementsByTagName("button")[0];
+getStartedBtn.addEventListener("mouseover", function() {
+  getStartedBtn.style.backgroundColor = "dodgerblue";
+});
+
+getStartedBtn.addEventListener("mouseleave", function() {
+  getStartedBtn.style.backgroundColor = "white";
+});
+
+getStartedBtn.addEventListener("click", function() {
+  TweenMax.to("#cta-img", 2, { y: 75, ease: Bounce.easeOut });
+});
+
 // Contact
 
 let contact_H4 = document.getElementsByTagName("h4")[5];
