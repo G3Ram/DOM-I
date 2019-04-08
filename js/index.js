@@ -146,7 +146,7 @@ vision_H4.innerText = siteContent["main-content"]["vision-h4"];
 let visionContent = document.getElementsByTagName("p")[4];
 visionContent.innerText = siteContent["main-content"]["vision-content"];
 
-//button event
+//button event - Updated for Stretch Challenge
 var getStartedBtn = document.getElementsByTagName("button")[0];
 getStartedBtn.addEventListener("mouseover", function() {
   getStartedBtn.style.backgroundColor = "dodgerblue";
@@ -157,7 +157,10 @@ getStartedBtn.addEventListener("mouseleave", function() {
 });
 
 getStartedBtn.addEventListener("click", function() {
-  TweenMax.to("#cta-img", 2, { y: 75, ease: Bounce.easeOut });
+  TweenMax.to("#cta-img", 1, {
+    y: 75,
+    ease: Bounce.easeOut
+  });
 });
 
 // Contact
